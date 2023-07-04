@@ -1,0 +1,13 @@
+<main>
+    <h2 [ngClass]="miClase">Desafío de directivas</h2>
+    <div class="container">
+      <h2 class="subtitle">Listado de alumnos de la universidad de colombia</h2>
+      <ul>
+        <li *ngFor="let alumno of ['Jefferson', 'Daniel', 'Fabian', 'Miguel', 'Alexander', 'Alex', 'Brahian']; let i = index" class="list-item" [ngClass]="{ 'arreglo': i % 2 === 0 }">
+          {{ i }} - {{ alumno | uppercase }}
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
